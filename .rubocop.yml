@@ -6,3 +6,8 @@ Style/Documentation:
 
 Metrics/LineLength:
   Max: 100
+
+AllCops:
+  Exclude:
+    - 'neo.rb'
+    - 'about_java_interop.rb'

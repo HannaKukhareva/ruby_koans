@@ -20,5 +20,5 @@ class AboutTriangleProject < Neo::Koan
     assert_equal :scalene, triangle(3, 4, 5)
     assert_equal :scalene, triangle(10, 11, 12)
     assert_equal :scalene, triangle(5, 4, 2)
-end
+  end
 end

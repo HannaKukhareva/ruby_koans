@@ -13,16 +13,18 @@
 # and
 #   about_triangle_project_2.rb
 
-def triangle(a, b, c)
-  raise TriangleError unless a > 0 and b > 0 and c > 0
-  raise TriangleError unless a + b > c and a + c > b and b + c > a
+def triangle(length_a, length_b, length_c)
+  a = length_a
+  b = length_b
+  c = length_c
+  raise TriangleError unless (a > 0) && (b > 0) && (c > 0)
+  raise TriangleError unless (a + b > c) && (a + c > b) && (b + c > a)
 
-  return :equilateral if a == c and a ==b and b == c
-  return :isosceles if a == b or b == c or a == c
+  return :equilateral if (a == c) && (a == b) && (b == c)
+  return :isosceles if (a == b) || (b == c) || (a == c)
 
   :scalene
 end
-
 
 class TriangleError < StandardError
 end
